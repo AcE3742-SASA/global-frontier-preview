@@ -6,9 +6,10 @@
 
 | 파일 | 설명 |
 |------|------|
-| `global-frontier-guide.html` | 앱 본체 (모든 데이터·이미지 base64 내장, 외부 리소스 0) |
+| `index.html` | 앱 본체 (모든 데이터·이미지 base64 내장, 외부 리소스 0) |
 | `manifest.json` | PWA 매니페스트 (홈 화면 추가 시 독립 앱 실행) |
-| `sw.js` | 서비스 워커 (오프라인 캐시, 캐시명 `gfp-guide-v1`) |
+| `sw.js` | 서비스 워커 (오프라인 캐시) — 수정 배포 시 `CACHE` 버전 올리기 |
+| `robots.txt` | 검색엔진 크롤링 차단 (개인정보 보호) |
 | `icon-180/192/512.png` | 홈 화면 아이콘 |
 
 ## 주요 기능
@@ -21,8 +22,9 @@
 
 ## 배포 (GitHub Pages)
 
-1. 이 저장소의 Settings → Pages → Source를 `main` 브랜치로 설정
-2. 게시된 URL을 공유하면, 친구들은 링크를 열고 브라우저 메뉴에서 **홈 화면에 추가**로 앱처럼 설치할 수 있습니다
-3. 내용을 수정해 다시 배포할 때는 `sw.js`의 `CACHE` 버전을 올려야 각 기기에 갱신이 반영됩니다
+1. 이 저장소의 Settings → Pages → Source를 `main` 브랜치(`/` 루트)로 설정
+2. 루트 URL(`https://ace3742-sasa.github.io/global-frontier-preview/`)로 바로 열립니다 (`index.html`)
+3. 게시된 URL을 공유하면, 친구들은 링크를 열고 브라우저 메뉴에서 **홈 화면에 추가**로 앱처럼 설치할 수 있습니다
+4. 내용을 수정해 다시 배포할 때는 `sw.js`의 `CACHE` 버전을 올려야 각 기기에 갱신이 반영됩니다
 
-> 루트 URL(`.../`)로 바로 열리게 하려면 `global-frontier-guide.html`을 `index.html`로 바꾸고 `manifest.json`의 `start_url`·`id`를 `"./"`로 수정하세요.
+> ⚠️ 이 사이트에는 인솔 교사 연락처와 학생 명단이 포함되어 있습니다. `robots.txt`와 `noindex` 메타로 검색엔진 노출은 막아두었지만, **링크를 아는 사람은 누구나 열람할 수 있으니** 반 내부에서만 공유하세요.
