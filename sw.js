@@ -5,7 +5,7 @@
        오프라인이면 캐시본으로 열림. (버전 올리는 걸 잊어도 안전)
      · 그 외(아이콘 등)   → 캐시 우선 + 백그라운드 갱신.
    - 큰 구조를 바꿔 배포할 때는 아래 CACHE 버전도 함께 올려주면 가장 확실하다. */
-const CACHE = "gfp-guide-v6";
+const CACHE = "gfp-guide-v7";
 
 self.addEventListener("install", (e) => {
   e.waitUntil(
