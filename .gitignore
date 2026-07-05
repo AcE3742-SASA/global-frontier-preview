@@ -10,3 +10,6 @@
 # 임시/백업
 *.bak
 backup-*.html
+
+# 아이콘 원본(앱에는 icon-*.png만 필요)
+KakaoTalk_*.png
